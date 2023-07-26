@@ -7,9 +7,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mob-sakai/MaskTweaksForUGUI.git"
+    "url": "git+https://github.com/LionelPerrault/MaskTweaksForUGUI.git"
   },
-  "author": "mob-sakai <sakai861104@gmail.com> (https://github.com/mob-sakai)",
+  "author": "LionelPerrault <LionelPerrault@gmail.com> (https://github.com/LionelPerrault)",
   "dependencies": {},
   "keywords": [
     "monitor",

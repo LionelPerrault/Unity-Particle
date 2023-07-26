@@ -7,9 +7,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mob-sakai/ParticleEffectForUGUI.git"
+    "url": "git+https://github.com/LionelPerrault/ParticleEffectForUGUI.git"
   },
-  "author": "mob-sakai <sakai861104@gmail.com> (https://github.com/mob-sakai)",
+  "author": "LionelPerrault <LionelPerrault0616@gmail.com> (https://github.com/LionelPerrault)",
   "dependencies": {},
   "keywords": [
     "ui",

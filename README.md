@@ -5,8 +5,8 @@ This plugin provide a component to render particle effect for uGUI in Unity 2018
 The particle rendering is maskable and sortable, without Camera, RenderTexture or Canvas.
 
 [![](https://img.shields.io/npm/v/com.coffee.ui-particle?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.coffee.ui-particle/)
-[![](https://img.shields.io/github/v/release/mob-sakai/ParticleEffectForUGUI?include_prereleases)](https://github.com/mob-sakai/ParticleEffectForUGUI/releases)
-[![](https://img.shields.io/github/release-date/mob-sakai/ParticleEffectForUGUI.svg)](https://github.com/mob-sakai/ParticleEffectForUGUI/releases)  [![](https://img.shields.io/github/license/mob-sakai/ParticleEffectForUGUI.svg)](https://github.com/mob-sakai/ParticleEffectForUGUI/blob/master/LICENSE.txt)
+[![](https://img.shields.io/github/v/release/LionelPerrault/ParticleEffectForUGUI?include_prereleases)](https://github.com/LionelPerrault/ParticleEffectForUGUI/releases)
+[![](https://img.shields.io/github/release-date/LionelPerrault/ParticleEffectForUGUI.svg)](https://github.com/LionelPerrault/ParticleEffectForUGUI/releases)  [![](https://img.shields.io/github/license/LionelPerrault/ParticleEffectForUGUI.svg)](https://github.com/LionelPerrault/ParticleEffectForUGUI/blob/master/LICENSE.txt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](http://makeapullrequest.com)  
 ![](https://img.shields.io/badge/Unity%202018.2+-supported-blue.svg)
 ![](https://img.shields.io/badge/Unity%202019.x-supported-blue.svg)
@@ -14,7 +14,7 @@ The particle rendering is maskable and sortable, without Camera, RenderTexture o
 ![](https://img.shields.io/badge/Universal%20Rendering%20Pipeline-supported-blue.svg)
 
 
-<< [Description](#Description) | [Demo](#demo) | [Installation](#installation) | [Usage](#usage) | [Development Note](#development-note) | [Change log](https://github.com/mob-sakai/ParticleEffectForUGUI/blob/upm/CHANGELOG.md) >>
+<< [Description](#Description) | [Demo](#demo) | [Installation](#installation) | [Usage](#usage) | [Development Note](#development-note) | [Change log](https://github.com/LionelPerrault/ParticleEffectForUGUI/blob/upm/CHANGELOG.md) >>
 
 
 
@@ -28,11 +28,11 @@ This plugin uses new APIs `MeshBake/MashTrailBake` (added with Unity 2018.2) to 
 You can mask and sort particles for uGUI without Camera, RenderTexture, Canvas.
 
 Compares this "Baking mesh" approach with the conventional approach:  
-[Performance test results](https://github.com/mob-sakai/ParticleEffectForUGUI/issues/193#issuecomment-1160028374)
+[Performance test results](https://github.com/LionelPerrault/ParticleEffectForUGUI/issues/193#issuecomment-1160028374)
 
 |Approach|Good|Bad|Screenshot|
 |-|-|-|-|
-|Baking mesh<br>**\(UIParticle\)**|Rendered as is.<br>Maskable.<br>Sortable.<br>Less objects.|[Not support `TEXCOORD*.zw` components for custom vertex stream](https://github.com/mob-sakai/ParticleEffectForUGUI/issues/191#issuecomment-1043409186)|<img src="https://user-images.githubusercontent.com/12690315/41765089-0302b9a2-763e-11e8-88b3-b6ffa306bbb0.gif" width="500px">|
+|Baking mesh<br>**\(UIParticle\)**|Rendered as is.<br>Maskable.<br>Sortable.<br>Less objects.|[Not support `TEXCOORD*.zw` components for custom vertex stream](https://github.com/LionelPerrault/ParticleEffectForUGUI/issues/191#issuecomment-1043409186)|<img src="https://user-images.githubusercontent.com/12690315/41765089-0302b9a2-763e-11e8-88b3-b6ffa306bbb0.gif" width="500px">|
 |Do nothing|Rendered as is.|**Looks like a glitch.**<br>Not maskable.<br>Not sortable.|<img src="https://user-images.githubusercontent.com/12690315/41765090-0329828a-763e-11e8-8d8a-f1d269ea3bc7.gif" width="500px">|
 |Convert particle to UIVertex<br>[\(UIParticleSystem\)](https://forum.unity.com/threads/free-script-particle-systems-in-ui-screen-space-overlay.406862/)|Maskable.<br>Sortable.<br>Less objects.|**Adjustment is difficult.**<br>Requires UI shaders.<br>Difficult to adjust scale.<br>Force hierarchy scalling.<br>Simulation results are incorrect.<br>Trail, rotation of transform, time scaling are not supported.<br>Generate heavy GC every frame.|<img src="https://user-images.githubusercontent.com/12690315/41765088-02deb9c6-763e-11e8-98d0-9e0c1766ef39.gif" width="500px">|
 |Use Canvas to sort|Rendered as is.<br>Sortable.|**You must to manage sorting orders.**<br>Not maskable.<br>More batches.|<img src="https://user-images.githubusercontent.com/12690315/41765087-02b866ea-763e-11e8-8c33-081c9ad852f8.gif" width="500px">|
@@ -75,9 +75,9 @@ Compares this "Baking mesh" approach with the conventional approach:
 
 ## Demo
 
-* [WebGL Demo](https://mob-sakai.github.io/demos/UIParticle_Demo/index.html)  
+* [WebGL Demo](https://LionelPerrault.github.io/demos/UIParticle_Demo/index.html)  
 > ![](https://user-images.githubusercontent.com/12690315/174311768-1843a5f2-f776-491b-aaa8-2a131a8b6a16.gif)
-* [WebGL Demo (Cartoon FX & War FX)](https://mob-sakai.github.io/Demos/ParticleEffectForUGUI_CFX)
+* [WebGL Demo (Cartoon FX & War FX)](https://LionelPerrault.github.io/Demos/ParticleEffectForUGUI_CFX)
   * [Cartoon FX Free][CFX] & [War FX][WFX] (by [Jean Moreno (JMO)][JMO]) with UIParticle
 > ![](https://user-images.githubusercontent.com/12690315/91664766-3e07ac00-eb2c-11ea-978b-ef723be80619.gif)
 
@@ -109,19 +109,19 @@ openupm add com.coffee.ui-particle
 
 Find the manifest.json file in the Packages folder of your project and add a line to `dependencies` field.
 
-* `"com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git"`
+* `"com.coffee.ui-particle": "https://github.com/LionelPerrault/ParticleEffectForUGUI.git"`
 
 To update the package, change suffix `#{version}` to the target version.
 
-* `"com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git#4.0.0",`
+* `"com.coffee.ui-particle": "https://github.com/LionelPerrault/ParticleEffectForUGUI.git#4.0.0",`
 
-Or, use [UpmGitExtension](https://github.com/mob-sakai/UpmGitExtension) to install and update the package.
+Or, use [UpmGitExtension](https://github.com/LionelPerrault/UpmGitExtension) to install and update the package.
 
 ### For Unity 2018.2
 
 Unity 2018.2 supports embedded packages.
 
-1. Download a source code zip file from [Releases](https://github.com/mob-sakai/ParticleEffectForUGUI/releases) page
+1. Download a source code zip file from [Releases](https://github.com/LionelPerrault/ParticleEffectForUGUI/releases) page
 2. Extract it
 3. Import it under `Packages` directory in your Unity project
 
@@ -249,7 +249,7 @@ UIParticles are based on UIVertex.
 Therefore, only xy components is available for each UV in the shader. (zw components will be ignored).  
 So unfortunately UIParticles will not work well with some shaders.  
 When using custom vertex streams, you can fill zw components with "unnecessary" data.  
-https://github.com/mob-sakai/ParticleEffectForUGUI/issues/191
+https://github.com/LionelPerrault/ParticleEffectForUGUI/issues/191
 
 - If you need a simple Additive shader, use the `UI/Additive` shader instead.
 - If you need a simple alpha-blend shader, use the `UI/Default` shader instead.
@@ -383,7 +383,7 @@ If you like it, please support me.
 With your support, I can spend more time on development. :)
 
 [![](https://user-images.githubusercontent.com/12690315/50731629-3b18b480-11ad-11e9-8fad-4b13f27969c1.png)](https://www.patreon.com/join/mob_sakai?)  
-[![](https://user-images.githubusercontent.com/12690315/66942881-03686280-f085-11e9-9586-fc0b6011029f.png)](https://github.com/users/mob-sakai/sponsorship)
+[![](https://user-images.githubusercontent.com/12690315/66942881-03686280-f085-11e9-9586-fc0b6011029f.png)](https://github.com/users/LionelPerrault/sponsorship)
 
 
 
@@ -397,13 +397,13 @@ With your support, I can spend more time on development. :)
 
 ## Author
 
-* ![](https://user-images.githubusercontent.com/12690315/96986908-434a0b80-155d-11eb-8275-85138ab90afa.png) [mob-sakai](https://github.com/mob-sakai) [![](https://img.shields.io/twitter/follow/mob_sakai.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=mob_sakai) ![GitHub followers](https://img.shields.io/github/followers/mob-sakai?style=social)
+* ![](https://user-images.githubusercontent.com/12690315/96986908-434a0b80-155d-11eb-8275-85138ab90afa.png) [LionelPerrault](https://github.com/LionelPerrault) [![](https://img.shields.io/twitter/follow/mob_sakai.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=mob_sakai) ![GitHub followers](https://img.shields.io/github/followers/LionelPerrault?style=social)
 
 
 
 ## See Also
 
-* GitHub page : https://github.com/mob-sakai/ParticleEffectForUGUI
-* Releases : https://github.com/mob-sakai/ParticleEffectForUGUI/releases
-* Issue tracker : https://github.com/mob-sakai/ParticleEffectForUGUI/issues
-* Change log : https://github.com/mob-sakai/ParticleEffectForUGUI/blob/upm/CHANGELOG.md
+* GitHub page : https://github.com/LionelPerrault/ParticleEffectForUGUI
+* Releases : https://github.com/LionelPerrault/ParticleEffectForUGUI/releases
+* Issue tracker : https://github.com/LionelPerrault/ParticleEffectForUGUI/issues
+* Change log : https://github.com/LionelPerrault/ParticleEffectForUGUI/blob/upm/CHANGELOG.md
